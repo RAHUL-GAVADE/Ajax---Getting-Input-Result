@@ -1,0 +1,14 @@
+//6.Differ readystate and status of Ajax
+
+READYSTATES
+0:Request not Initialized	
+1:Server Connection Estabalished
+3:Processing Request
+4:Request Finished and Responce is Ready
+
+STATUS
+200:"OK"
+404:"Page not Found"
+if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+	
+}

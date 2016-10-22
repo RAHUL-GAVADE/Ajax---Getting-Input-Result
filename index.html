@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title> Rahul Project   </title>
+		<script type="text/javascript">
+
+		 function ajax_request(get_val){
+
+		 //3.XMLHTTPRequest Object and It's Method	
+
+            var xmlhttp = new XMLHttpRequest();
+          
+          //5.onreadystatechange Method
+
+            xmlhttp.onreadystatechange = function  () {
+            	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    var result = document.getElementById('result');
+                    result.innerHTML = xmlhttp.responseText;
+            	}
+            }
+
+            //8.Creating URL Veriable
+
+            xmlhttp.open('GET','data.php?var1='+get_val,true);
+            xmlhttp.send();
+		 }
+
+		</script>
+	</head>
+	<body>
+		<button onclick="ajax_request();">Click Me</button>
+        <input type="text" onkeyup="ajax_request(this.value);">        
+		<div id="result">This is result</div>
+	</body>
+</html>
